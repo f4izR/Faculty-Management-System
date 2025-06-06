@@ -38,3 +38,26 @@ git clone https://github.com/f4izR/Faculty-Management-System.git
 ```bash
 cd faculty-management-system
 ```
+### 2. Backend Setup
+```bash
+cd server
+```
+```bash
+npm install
+```
+- Start the backend
+```bash
+npm satrt
+```
+### 3. Frontend  Setup
+```bash
+cd client
+```
+```bash
+npm install
+```
+```bash
+npm run dev
+```
+---
+The React app will run at: http://localhost:3000

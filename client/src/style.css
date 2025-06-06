@@ -1,0 +1,781 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 100vh;
+  background-color: rgba(12, 30, 51, 1);
+  padding-top: 20px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+}
+
+.navbar-collapse {
+  width: 100%;
+}
+
+.navbar-nav {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  padding: 0;
+}
+
+.nav-item {
+  list-style: none;
+  width: 100%;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 10px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s;
+}
+
+/* Main content styles */
+.app {
+  display: flex;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.btns__1, .btns__2 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.display-btn {
+  text-decoration: none;
+}
+
+.departments-btn, .faculty-btn, .programs-btn,
+.skills-btn, .courses-btn, .sections-btn {
+  color: #0C1E33;
+  padding: 60px 80px;
+  border-radius: 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5), inset 0px 4px 4px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.departments-btn {
+  background-color: rgba(237, 185, 185, 0.5);
+}
+
+.faculty-btn {
+  background-color: #E7B69B;
+}
+
+.programs-btn {
+  background-color: #EBD8A6;
+}
+
+.skills-btn {
+  background-color: #84DCE2;
+}
+
+.courses-btn {
+  background-color: #7EE5A1;
+}
+
+.sections-btn {
+  background-color: #CCAACF;
+}
+
+/* Hover effects */
+.departments-btn:hover {
+  background-color: rgba(237, 185, 185, 0.7);
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.7), inset 0px 6px 6px rgba(0, 0, 0, 0.7);
+}
+
+.faculty-btn:hover {
+  background-color: #E7B69B;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.7), inset 0px 6px 6px rgba(0, 0, 0, 0.7);
+}
+
+.programs-btn:hover {
+  background-color: #EBD8A6;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.7), inset 0px 6px 6px rgba(0, 0, 0, 0.7);
+}
+
+.skills-btn:hover {
+  background-color: #84DCE2;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.7), inset 0px 6px 6px rgba(0, 0, 0, 0.7);
+}
+
+.courses-btn:hover {
+  background-color: #7EE5A1;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.7), inset 0px 6px 6px rgba(0, 0, 0, 0.7);
+}
+
+.sections-btn:hover {
+  background-color: #CCAACF;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.7), inset 0px 6px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive styles */
+@media(max-width:768px){
+  .navbar{
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+  }
+  .navbar-brand{
+    font-size: 1.2rem;
+    height: auto;
+  }
+  .navbar-nav{
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .btns{
+    flex-direction: column;
+    height: auto;
+    gap:20px;
+  }
+}
+@media(max-width:480px){
+  .navbar{
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+  }
+  .navbar-brand{
+    font-size: 1rem;
+    height: auto;
+  }
+  .navbar-nav{
+    flex-direction: column;
+    gap:10px;
+  }
+  .btns{
+    flex-direction: column;
+    height: auto;
+    gap:10px;
+  }
+  .departments-btn, .faculty-btn, .programs-btn,
+    .skills-btn, .courses-btn, .sections-btn{
+      padding: 20px 40px;
+    }
+}
+
+/* Common styles */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  width: 100%;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0C1E33;;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.btn-primary:hover {
+  background-color: #003366;
+}
+
+.table {
+  width: 80%; /* Adjust width as needed */
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table thead th {
+  background-color: #f8f9fa;
+  color: #333;
+  text-align: left;
+  padding: 10px;
+}
+
+.table tbody td {
+  border: 1px solid #dee2e6;
+  padding: 10px;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.table tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.btn-warning {
+  background-color: #2d4866;
+  color: white;
+  margin-right: 5px;
+}
+
+.btn-warning:hover {
+  background-color: #0C1E33;
+}
+
+.btn-danger {
+  background-color: #db3434;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #F20D0D;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+}
+
+.sidebar .nav-item {
+  margin: 10px 0;
+}
+
+.sidebar .nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.sidebar .nav-link:hover {
+  color: #adb5bd;
+}
+
+.sidebar .nav-link .material-icons {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.header {
+  margin-left: 270px;
+  padding: 20px;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+}
+
+.add-department-btn {
+  margin-left: 270px;
+}
+
+/* Additional specific styles */
+.programs-rows{
+  list-style: none;
+}
+.faculty-rows{
+  list-style: none;
+}
+
+.add-course-btn, .add-experience-btn, .add-faculty-btn, .add-skill-btn, .add-section-btn {
+  margin-left: 270px;
+}
+
+/* Dashboard specific styles */
+.dashboard-header {
+  margin-left: 270px;
+  padding: 20px;
+}
+.skill__add{
+  cursor: pointer;
+}
+.faculty{
+  width: 100%;
+}
+.faculty__table{
+  margin-top: 20px;
+}
+.faculty-title{
+  margin-top:30px ;
+}
+.dept{
+  width: 100%;
+}
+.dept__Title{
+  text-align: center;
+  margin-top: 30px;
+}
+.dept__table{
+  margin-top: 30px;
+}
+.faculty__title{
+  text-align: center;
+  margin-top: 30px;
+}
+.program-table{
+  margin-top: 30px;
+}
+.program-title{
+  text-align: center;
+  margin-top: 30px;
+}
+.skill{
+  width: 100%;
+}
+.skill__title{
+  text-align: center;
+  margin-top: 20px;
+}
+.course{
+  width: 100%;
+}
+/* styles.css */
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.department-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.department-form label {
+  margin-bottom: 10px;
+}
+.dept-btn{
+  margin: 0 5px;
+}
+.form-input {
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.save-button {
+  background-color: #4ca0af;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: #1160c7;
+}
+
+.add-button, .edit-button, .delete-button, .close-button {
+  background-color: #008CBA;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.add-button:hover, .edit-button:hover, .delete-button:hover, .close-button:hover {
+  background-color: #007bb5;
+}
+
+.add-course-btn{
+  cursor: pointer;
+}
+.course__title{
+  text-align: center;
+  margin-top: 20px;
+}
+.program__btn{
+  margin: 0 5px;
+}
+.skill__table{
+  margin-top: 20px;
+}
+.dashboard-header h2 {
+  font-size: 2.5rem;
+}
+.operation-btns{
+  margin: 5px;
+}
+.btn{
+  margin: 5px 0;
+}
+.faculty-title{
+  text-align: center;
+}
+.faculty{
+  width: 100%;
+}
+.faculty-table{
+  margin-left: 130px;
+}
+.btn__faculty{
+  margin-left: 150px;
+  transition: 0.3s ease;
+}
+.btn__faculty:hover{
+  scale: 1.1;
+}
+
+
+.program-management{
+  width: 100%;
+}
+.section-title{
+  text-align: center;
+  margin-top: 20px;
+}
+.table{
+  margin-left: 150px;
+}
+.btn__program__edit{
+  background-color: #db3434;
+  color: white;
+}
+.btn__program__edit:hover {
+  background-color: #F20D0D;
+}
+.btn__program__dlt{
+  background-color: #2d4866;
+  color: white;
+  margin-right: 5px;
+}
+.btn__program__dlt:hover{
+  background-color: #0C1E33;
+}
+.btn__program{
+  margin: 0 5px;
+}
+.add__program{
+  margin-left: 150px;
+  background-color: #0C1E33;
+  transition: 0.5s ease ;
+}
+.add__program:hover{
+  scale: 1.1;
+}
+.skills-management{
+  width: 100%;
+}
+.skill__btn{
+  margin: 0 5px;
+}
+.skill__dlt{
+  background-color:#db3434;
+}
+.skill__edit:hover{
+  background-color: #0C1E33;
+}
+.skill__edit{
+  background-color: #2d4866;
+}
+.skill__dlt{
+  background-color: #F20D0D;
+}
+.skill__add{
+  background-color: #0C1E33;
+  margin-left: 150px;
+  transition: 0.3s ease;
+}
+.skill__add:hover{
+  scale: 1.1;
+}
+
+.course-management {
+  width: 100%;
+}
+
+.section-management {
+  width: 100%;
+}
+
+.operation-btns {
+  display: flex;
+  gap: 5px;
+}
+
+.btn__course__edit, .btn__section__edit {
+  background-color: #2d4866;
+  color: white;
+  margin-right: 5px;
+}
+
+.btn__course__edit:hover, .btn__section__edit:hover {
+  background-color: #0C1E33;
+}
+
+.btn__course__dlt, .btn__section__dlt {
+  background-color: #db3434;
+  color: white;
+}
+
+.btn__course__dlt:hover, .btn__section__dlt:hover {
+  background-color: #F20D0D;
+}
+
+.add-course-btn, .add-section-btn {
+  margin-left: 150px;
+  transition: 0.3s ease;
+}
+
+.add-course-btn:hover, .add-section-btn:hover {
+  scale: 1.1;
+}
+
+.course-table, .section-table {
+  margin-left: 150px;
+}
+.course__btn{
+  margin: 0 5px;
+}
+.course__edit{
+  background-color: #db3434;
+
+}
+.course__edit:hover{
+  background-color: #F20D0D;
+}
+.course__dlt{
+  background-color: #003366;
+}
+.course__dlt:hover{
+  background-color: #0C1E33;
+}
+.course__add{
+  margin-left: 150px;
+  background-color: #0C1E33;
+  transition: 0.3s ease;
+}
+.course__add:hover{
+  scale: 1.1;
+}
+.section-management{
+  width: 100%;
+  text-align: center;
+}
+.section__add{
+  margin-left: 150px;
+  transition: 0.3s ease;
+}
+.section__add:hover{
+  scale: 1.1;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.home-logo {
+  max-width: 100%;
+  height: auto;
+}
+.add-skill-btn{
+  transition: 0.3s ease;
+}
+.add-skill-btn:hover{
+  scale: 1.1;
+}
+
+
+
+/* -------------------------------------------------------------- */
+/* styles.css */
+/* styles.css */
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.faculty-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.faculty-form label {
+  margin-bottom: 10px;
+}
+
+.form-input {
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.save-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #45a049;
+}
+
+.add-button, .edit-button, .delete-button, .close-button {
+  background-color: #008CBA;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.add-button:hover, .edit-button:hover, .delete-button:hover, .close-button:hover {
+  background-color: #007bb5;
+}
+/* ---------------------------------------------------------------------------------------- */
+.section-management {
+  padding: 20px;
+}
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+.section-table {
+  /* width: 100%; */
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+.section-table th, .section-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.operation-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.skill__add {
+  margin-top: 10px;
+}
+
+.section-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.section-form input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.section-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.section-form button:hover {
+  background-color: #0056b3;
+}
